@@ -9,6 +9,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+  base: 'https://github.com/rajashree-guha/Bedotroiee_Portfolio',
   plugins: [
     react(),
     mode === 'development' &&
