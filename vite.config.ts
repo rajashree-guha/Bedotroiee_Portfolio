@@ -9,11 +9,10 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: '/Bedotroiee_Portfolio/',
+  base: mode === 'development' ? '/' : '/Bedotroiee_Portfolio/',
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
+    ...(mode === 'development' ? [componentTagger()] : []),
   ].filter(Boolean),
   resolve: {
     alias: {
