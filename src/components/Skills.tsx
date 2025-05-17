@@ -53,7 +53,6 @@ const Skills = () => {
         <Progress 
           value={showProgress ? skill.percentage : 0} 
           className="h-2 bg-gray-200"
-          indicatorClassName="bg-teal-500"
         />
       </div>
     ));

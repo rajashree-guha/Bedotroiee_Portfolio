@@ -16,7 +16,7 @@ const Hero = ({ scrollToSection }: HeroProps) => {
                 👋 Hi, I'm
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-3">
-                [Your Name]
+                Bedotroiee Chowdhury Guha
               </h1>
               <h2 className="text-2xl md:text-3xl font-medium text-teal-500 mb-5">
                 Data Analyst
@@ -32,18 +32,27 @@ const Hero = ({ scrollToSection }: HeroProps) => {
                   Contact Me
                   <ArrowRight size={18} />
                 </button>
-                <button className="px-6 py-3 border border-teal-500 text-teal-500 rounded-md hover:bg-teal-50 transition-colors flex items-center justify-center sm:justify-start gap-2">
+                <a 
+                  href="/resume.pdf" 
+                  download
+                  className="px-6 py-3 border border-teal-500 text-teal-500 rounded-md hover:bg-teal-50 transition-colors flex items-center justify-center sm:justify-start gap-2"
+                >
                   Download CV
                   <Download size={18} />
-                </button>
+                </a>
               </div>
             </div>
           </div>
           <div className="md:w-1/2 order-1 md:order-2 flex justify-center md:justify-end">
             <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden relative border-4 border-white shadow-lg">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-teal-400 opacity-30"></div>
-              <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
-                <span className="text-2xl font-medium text-gray-400">[Your Photo]</span>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <svg className="w-3/4 h-3/4 text-teal-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5z" stroke="currentColor" strokeWidth="2" />
+                  <path d="M4 8h16M8 4v16" stroke="currentColor" strokeWidth="2" />
+                  <circle cx="15" cy="15" r="2" stroke="currentColor" strokeWidth="2" />
+                  <path d="M12 10h4M12 16h1M12 12h2" stroke="currentColor" strokeWidth="2" />
+                </svg>
               </div>
             </div>
           </div>

@@ -51,19 +51,19 @@ const Contact = () => {
     {
       icon: <Mail className="h-5 w-5" />,
       title: "Email",
-      content: "your.email@example.com",
-      link: "mailto:your.email@example.com"
+      content: "Bedotroiee.bt21@gmail.com",
+      link: "mailto:Bedotroiee.bt21@gmail.com"
     },
     {
       icon: <Phone className="h-5 w-5" />,
       title: "Phone",
-      content: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
+      content: "+91-123456789",
+      link: "tel:+91123456789"
     },
     {
       icon: <MapPin className="h-5 w-5" />,
       title: "Location",
-      content: "[Your City], [Your Country]",
+      content: "Bangalore, India",
       link: "#"
     }
   ];
@@ -80,49 +80,8 @@ const Contact = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <div className="lg:col-span-1">
-            <div className="bg-white rounded-lg shadow-sm p-6">
-              <h3 className="text-xl font-bold text-gray-800 mb-6">Contact Information</h3>
-              
-              <div className="space-y-6">
-                {contactInfo.map((item, index) => (
-                  <div key={index} className="flex items-start">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center text-teal-500">
-                      {item.icon}
-                    </div>
-                    <div className="ml-4">
-                      <h4 className="text-sm font-medium text-gray-500">{item.title}</h4>
-                      <a 
-                        href={item.link} 
-                        className="text-gray-800 hover:text-teal-500 transition-colors"
-                      >
-                        {item.content}
-                      </a>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              
-              <div className="mt-8">
-                <h4 className="text-sm font-medium text-gray-500 mb-4">Follow Me</h4>
-                <div className="flex space-x-4">
-                  {['LinkedIn', 'Twitter', 'GitHub', 'Kaggle'].map((platform, index) => (
-                    <a 
-                      key={index}
-                      href="#" 
-                      className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-teal-500 hover:text-white transition-colors"
-                      aria-label={platform}
-                    >
-                      {platform[0]}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="lg:col-span-2">
+        <div className="flex flex-col lg:flex-row gap-8 max-w-5xl mx-auto">
+          <div className="lg:w-2/3 order-2 lg:order-1">
             <div className="bg-white rounded-lg shadow-sm p-6">
               <h3 className="text-xl font-bold text-gray-800 mb-6">Send Me a Message</h3>
               
@@ -200,6 +159,31 @@ const Contact = () => {
                   </Button>
                 </form>
               </Form>
+            </div>
+          </div>
+          
+          <div className="lg:w-1/3 order-1 lg:order-2">
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <h3 className="text-xl font-bold text-gray-800 mb-6">Contact Information</h3>
+              
+              <div className="space-y-6">
+                {contactInfo.map((item, index) => (
+                  <div key={index} className="flex items-start">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center text-teal-500">
+                      {item.icon}
+                    </div>
+                    <div className="ml-4">
+                      <h4 className="text-sm font-medium text-gray-500">{item.title}</h4>
+                      <a 
+                        href={item.link} 
+                        className="text-gray-800 hover:text-teal-500 transition-colors"
+                      >
+                        {item.content}
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

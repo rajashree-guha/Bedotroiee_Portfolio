@@ -10,6 +10,7 @@ interface Project {
   description: string;
   category: string;
   image: string;
+  imageAlt: string;
   tools: string[];
   link: string;
 }
@@ -23,7 +24,8 @@ const Projects = () => {
       title: "Sales Dashboard",
       description: "An interactive dashboard visualizing quarterly sales data with regional breakdowns and trend analysis.",
       category: "visualization",
-      image: "sales-dashboard",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426&ixlib=rb-4.0.3",
+      imageAlt: "Dashboard showing sales data with colorful charts and graphs",
       tools: ["Tableau", "Excel", "SQL"],
       link: "#"
     },
@@ -32,7 +34,8 @@ const Projects = () => {
       title: "Customer Segmentation",
       description: "Analysis of customer behavior patterns using clustering algorithms to identify distinct market segments.",
       category: "analysis",
-      image: "customer-segmentation",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3",
+      imageAlt: "Visual representation of customer segments with colorful clusters",
       tools: ["Python", "scikit-learn", "Pandas"],
       link: "#"
     },
@@ -41,7 +44,8 @@ const Projects = () => {
       title: "Predictive Maintenance Model",
       description: "Machine learning model to predict equipment failures before they occur, reducing downtime by 37%.",
       category: "machine-learning",
-      image: "predictive-maintenance",
+      image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&q=80&w=2574&ixlib=rb-4.0.3",
+      imageAlt: "Machine learning model visualization with predictive analytics",
       tools: ["Python", "TensorFlow", "Power BI"],
       link: "#"
     },
@@ -50,7 +54,8 @@ const Projects = () => {
       title: "Market Trend Analysis",
       description: "Comprehensive analysis of market trends over a five-year period with forecasting of future directions.",
       category: "analysis",
-      image: "market-trends",
+      image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3",
+      imageAlt: "Line graphs showing market trends over time with forecast projections",
       tools: ["R", "ggplot2", "Excel"],
       link: "#"
     },
@@ -59,7 +64,8 @@ const Projects = () => {
       title: "Supply Chain Optimization",
       description: "Data-driven optimization of supply chain processes leading to 15% reduction in logistics costs.",
       category: "optimization",
-      image: "supply-chain",
+      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3",
+      imageAlt: "Supply chain network diagram with optimization indicators",
       tools: ["Python", "Tableau", "SQL"],
       link: "#"
     },
@@ -68,7 +74,8 @@ const Projects = () => {
       title: "Financial Performance Dashboard",
       description: "Interactive visualization of key financial metrics with drill-down capabilities for detailed analysis.",
       category: "visualization",
-      image: "financial-dashboard",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3",
+      imageAlt: "Financial dashboard with KPI metrics and interactive charts",
       tools: ["Power BI", "Excel", "SQL"],
       link: "#"
     }
@@ -116,8 +123,12 @@ const Projects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map(project => (
             <Card key={project.id} className="overflow-hidden transition-all hover:shadow-lg">
-              <div className="h-48 bg-gray-200 flex items-center justify-center">
-                <span className="text-gray-500">[{project.image} Image]</span>
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.imageAlt} 
+                  className="w-full h-full object-cover transition-transform hover:scale-105"
+                />
               </div>
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
